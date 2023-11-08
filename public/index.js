@@ -3,7 +3,7 @@
 //arrays used for class variables for intruments:
 const instruments = ["Old4500", "New4500", "6500", "5500"];
 const instrumentStatus = ["In use", "Available", "Maintenance"];
-const initials = ["nn", "ob", "kw", "sc", "izi", "hm"];
+const initials = ["", "nn", "ob", "kw", "sc", "izi", "hm"];
 //////////////////////////////////////////////////////////////////////////
 
 
@@ -29,14 +29,27 @@ function Instrument(title, instrumentStatus, user, details){
     this.user = user;
     this.details = details;
     this.structure = function(){
+        //create section for each individual intrumet- id of section will be title:
         document.getElementById('instruments').appendChild(document.createElement('section')).setAttribute('id',title);
+        //1a) creates an h2 attribute- the id of this element will be title plus name:
         document.getElementById(title).appendChild(document.createElement('h2')).setAttribute('id', title + 'name');
+        //1b)sets the text of the h2 element to the name of the instrument (title):
         document.getElementById(title + 'name').appendChild(document.createElement('p').appendChild(document.createTextNode(title)));
+        //2a)status
         document.getElementById(title).appendChild(document.createElement('h3')).setAttribute('id', title + 'status');
+        //2b)status
         document.getElementById(title + 'status').appendChild(document.createElement('p').appendChild(document.createTextNode("Status:  " + instrumentStatus)));
+        //3) user
         document.getElementById(title).appendChild(document.createElement('h3')).setAttribute('id', title + 'user');
+        //3) user
         document.getElementById(title + 'user').appendChild(document.createElement('p').appendChild(document.createTextNode("User:  " + user)));
+        //4a) trays
+        document.getElementById(title).appendChild(document.createElement('h3')).setAttribute('id', title + 'trays');
+        //4b) trays
+        document.getElementById(title + 'trays').appendChild(document.createElement('p').appendChild(document.createTextNode("Trays in use:  ")));
+        //5a) comments
         document.getElementById(title).appendChild(document.createElement('h3')).setAttribute('id', title + 'details');
+        //5b) comments
         document.getElementById(title + 'details').appendChild(document.createElement('p').appendChild(document.createTextNode("Comments:  " + details)));
         
     }
