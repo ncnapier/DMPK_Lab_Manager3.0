@@ -9,16 +9,16 @@ const initials = ["", "nn", "ob", "kw", "sc", "izi", "hm"];
 
 //set instrument status:
 // ###NOTE### consider eliminating these variables and just using numbers when declaring instances of new instruments? 
-var sa = 0;
+var sa = 1;
 var sb = 1;
-var sc = 0;
-var sd = 2;
+var sc = 1;
+var sd = 1;
 
 //set user initials:
-var ia = 2;
-var ib = 3;
+var ia = 0;
+var ib = 0;
 var ic = 0;
-var id = 1;
+var id = 0;
 /////////////////////////////////////////////////////////////////////////
 
 

@@ -8,9 +8,10 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
+    flex-direction: column;
 }
 
-#instruments {
+#instruments, #user_form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,6 +19,18 @@ header{
     font-family: Roboto, sans-serif;
     border: 1px solid gray;
     width: 45%;
+}
+
+#user_form{
+    height: 400px;
+    margin-top: 20px;
+
+}
+#instrument_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
 }
 h2{
     text-align: center;
