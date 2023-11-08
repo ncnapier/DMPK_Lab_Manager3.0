@@ -103,3 +103,12 @@ function addCount(){
 let thisOne = instruments[instrumentNumber];
 document.getElementById('instruments').addEventListener("click", addCount)
 ////////////////////////////////////////////////////////////////////////////////////
+
+//functioning for submit button
+//###note### add event listener on id=submit; function onclick; send key:value pairs from form to local storage. pull key: value pairs from local storage to full out tables
+
+function submitRun(){
+    console.log("run submitted")
+};
+
+document.getElementById('submit').addEventListener('click', submitRun);
