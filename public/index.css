@@ -1,0 +1,27 @@
+header{
+    font-family: Roboto, sans-serif;
+    text-align: center;
+}
+
+#main, #display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#instruments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    border: 1px solid gray;
+    width: 45%;
+}
+h2{
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
