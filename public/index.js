@@ -58,25 +58,26 @@ function Instrument(title, instrumentStatus, user, trays, details){
     }
 };
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-let old4500array = localStorage.getItem('instrument0');
-let new4500array = localStorage.getItem('instrument1');
-let i6500array = localStorage.getItem('instrument2');
-let i5500array = localStorage.getItem('instrument3');
+let old4500array = localStorage.getItem('instrument0').split(',');
+let new4500array = localStorage.getItem('instrument1').split(',');
+let i6500array = localStorage.getItem('instrument2').split(',');
+let i5500array = localStorage.getItem('instrument3').split(',');
 console.log(i5500array + "4500 array");
 console.log(old4500array.slice(9, old4500array.length))
+console.log(i6500array)
 //declaring individual instances of instruments:
 
 //
-const fortyFiveHundred = new Instrument(instruments[0], instrumentStatus[old4500array[2]], initials[old4500array[4]],old4500array[6] + ',' + old4500array[8], old4500array.slice(10, old4500array.length));
+const fortyFiveHundred = new Instrument(instruments[0], instrumentStatus[old4500array[1]], initials[old4500array[2]],old4500array[3] + ',' + old4500array[4], old4500array[5]);
 fortyFiveHundred.structure();
 
-const fiftyFiveHundred = new Instrument(instruments[3], instrumentStatus[i5500array[2]], initials[i5500array[4]],trays, i5500array.slice(9, old4500array.length));
+const fiftyFiveHundred = new Instrument(instruments[3], instrumentStatus[i5500array[1]], initials[i5500array[2]],i5500array[3] + ',' + i5500array[4], i5500array[5]);
 fiftyFiveHundred.structure();
 
-const newFortyFiveHundred = new Instrument(instruments[1], instrumentStatus[new4500array[2]], initials[new4500array[4]],trays, new4500array.slice(9, old4500array.length));
+const newFortyFiveHundred = new Instrument(instruments[1], instrumentStatus[new4500array[1]], initials[new4500array[2]],new4500array[3] + ',' + new4500array[4], new4500array[5]);
 newFortyFiveHundred.structure();
 
-const sixtyFiveHundred = new Instrument(instruments[2], instrumentStatus[i6500array[2]], initials[i6500array[4]],trays, i6500array.slice(9, old4500array.length));
+const sixtyFiveHundred = new Instrument(instruments[2], instrumentStatus[i6500array[1]], initials[i6500array[2]],i6500array[3] + ',' + i6500array[4], i6500array[5]);
 sixtyFiveHundred.structure();
 
 //change instrument on display:
