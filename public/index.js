@@ -31,6 +31,9 @@ function Instrument(title, instrumentStatus, user, trays, details){
     this.user = user;
     this.trays = trays;
     this.details = details;
+    this.namePush = function(title){
+        instruments.push(title);
+    }
     this.structure = function(){
         //create section for each individual intrumet- id of section will be title:
         document.getElementById('instruments').appendChild(document.createElement('section')).setAttribute('id',title);
@@ -118,7 +121,7 @@ document.getElementById('instruments').addEventListener("click", addCount)
 //###note### add event listener on id=submit; function onclick; send key:value pairs from form to local storage. pull key: value pairs from local storage to full out tables
 
 function submitRun(event){
-    event.preventDefault();
+    //event.preventDefault();
     console.log("run submitted")
     let inst = document.getElementById('instrument_select').value;
     let set = document.getElementById('status').value;
